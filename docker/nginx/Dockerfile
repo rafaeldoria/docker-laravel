@@ -1,0 +1,7 @@
+FROM nginx:1.23
+
+ARG UID
+ARG GID
+
+ENV UID=${UID}
+ENV GID=${GID}
