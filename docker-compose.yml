@@ -12,7 +12,7 @@ services:
     restart: unless-stopped
     tty: true
     volumes:
-      - ./app-transaction:/var/www
+      - ./app-crawler:/var/www
       - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
     networks:
       - laravel
@@ -31,7 +31,7 @@ services:
       - '8180:80'
       - '443:443'
     volumes:
-      - ./app-transaction:/var/www
+      - ./app-crawler:/var/www
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
     networks:
       - laravel
